@@ -18,19 +18,6 @@ class Eagle:
     def fly(self, dy):
         self.y_distance += dy
 
-class Unicorn(Horse, Eagle):  # Определение класса Unicorn, который наследуется от классов Horse и Eagle
-
-    def move(self, dx, dy):  # Метод для перемещения unicorn
-        super().run(dx)  # unicorn бежит на расстояние dx
-        super().fly(dy)  # unicorn летит на расстояние dy
-
-    def get_pos(self):  # Метод для получения текущей позиции unicorn
-        return (self.x_distance, self.y_distance)  # Возвращает кортеж с текущими координатами unicorn
-
-    def voice(self):  # Метод для вывода звука, который издает unicorn
-        print(self.sound)  # Выводит звук, издаваемый unicorn
-
-
 class Pegasus(Horse, Eagle):
 
     def move(self, dx, dy):
